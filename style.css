@@ -1,12 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0b; /* Hitam pekat modern */
+    background-color: #0a0a0b;
     color: #e0e0e0;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh; 
+    overflow-x: hidden;
 }
 
 nav {
@@ -85,13 +84,14 @@ h1 {
     backdrop-filter: blur(5px);
 }
 
-/* Container Utama */
 #learning-path {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Supaya kalau di HP, kotaknya turun ke bawah */
     gap: 30px;
-    padding: 80px 20px;
-    flex-wrap: wrap; /* Agar responsif di HP */
+    padding: 100px 20px; /* Memberi ruang agar tidak menempel ke hero */
+    background: transparent;
+}
 }
 
 /* Desain Kotak (Card) */
