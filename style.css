@@ -85,22 +85,86 @@ h1 {
     backdrop-filter: blur(5px);
 }
 
+/* Container Utama */
+#learning-path {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
+    flex-wrap: wrap; /* Agar responsif di HP */
+}
+
+/* Desain Kotak (Card) */
+.card {
+    background: rgba(255, 255, 255, 0.03); /* Transparansi halus */
+    backdrop-filter: blur(15px); /* Efek kaca buram */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    padding: 40px 30px;
+    width: 280px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    text-align: left;
+}
+
+/* Efek Cahaya di Belakang Card saat Hover */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 242, 255, 0.1), transparent);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Animasi Mengangkat & Glow */
 .card:hover {
-    transform: translateY(-10px);
-    border-color: #00f2ff;
-    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+    transform: translateY(-15px);
+    border-color: rgba(0, 242, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(0, 242, 255, 0.1);
 }
 
+/* Styling Text di dalam Kotak */
 .card h3 {
+    font-size: 1.5rem;
     color: #00f2ff;
-    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
 }
 
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 25px;
+}
+
+/* Button "Pelajari" yang lebih keren */
 .learn-more {
-    color: #fff;
-    font-size: 0.8rem;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-    border-bottom: 1px solid #00f2ff;
+    color: #00f2ff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.card:hover .learn-more {
+    gap: 15px; /* Panah bergeser saat hover */
+    color: #fff;
 }
