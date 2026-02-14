@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0b; /* Hitam pekat modern */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #00f2ff; /* Warna neon cyan */
+    text-shadow: 0 0 10px #00f2ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f2ff;
+    text-shadow: 0 0 8px #00f2ff;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, #00f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-start {
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid #00f2ff;
+    color: #00f2ff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+}
+
+.btn-start:hover {
+    background: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 20px #00f2ff;
+}
