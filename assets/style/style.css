@@ -284,3 +284,55 @@ section {
         height: auto;
     }
 }
+
+/* === Search & Explore Page Styles === */
+.search-container {
+    margin: 60px 0;
+    position: relative;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 20px 30px;
+    color: var(--text-primary);
+    border-radius: 40px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: 0.3s;
+    padding-right: 60px;
+}
+
+.search-input:focus {
+    border-color: var(--accent-color);
+    background: rgba(255, 204, 0, 0.02);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.search-icon-btn {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.material-card {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.material-card.hidden {
+    display: none;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
